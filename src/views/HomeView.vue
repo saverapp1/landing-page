@@ -6,7 +6,7 @@ import WhySaver from '@/components/WhySaver.vue';
 import HowSaver from '@/components/HowSaver.vue';
 import FaqSaver from '@/components/FaqSaver.vue';
 
-//footer
+//footer comp
 import FooterPage from '@/components/FooterPage.vue';
 </script>
 
