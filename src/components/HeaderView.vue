@@ -8,7 +8,7 @@
    </div>
    <div
     class="flex py-[9.5px] px-[12px] space-x-[8px] items-center bg-[#fff] rounded-[100px] border border-[#fff] md:cursor-pointer download_shade">
-    <div class="text-[#7d4ec6] text-[16px] md:leading-[26px] font-[700] tracking-[-0.32px]">
+    <div class="text-[#7d4ec6] text-[16px] md:leading-[26px] font-[500] tracking-[-0.32px]">
      Download app
     </div>
     <div><img src="/download.svg" /></div>
