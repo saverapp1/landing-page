@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BigScreenFeatures from './BigScreenFeatures.vue';
+import SmallScreenFeatures from './SmallScreenFeatures.vue';
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import BigScreenFeatures from './BigScreenFeatures.vue';
    </span>
   </div>
   <BigScreenFeatures />
+  <SmallScreenFeatures />
  </div>
 </template>
 

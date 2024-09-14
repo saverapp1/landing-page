@@ -66,7 +66,7 @@ const openSocial = (tab: string) => {
 </script>
 
 <template>
- <div class="block w-full">
+ <div class="w-full hidden md:block">
   <!-- tab selector -->
   <div class="w-full tab overflow-x-scroll mb-[20px]">
    <div class="flex w-fit items-center space-x-[10px] md:space-x-[21px]">
