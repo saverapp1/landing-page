@@ -1,10 +1,15 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import BigScreenFeatures from './BigScreenFeatures.vue';
 import SmallScreenFeatures from './SmallScreenFeatures.vue';
+import { useStaggerFade } from '@/composables/useAnimation';
+
+const featuresRef = ref<HTMLElement | null>(null)
+useStaggerFade(featuresRef, { stagger: 0.2, y: 40, start: 'top 85%' })
 </script>
 
 <template>
- <div class="w-full pb-[50px] md:pb-[100px]">
+ <div ref="featuresRef" class="w-full pb-[50px] md:pb-[100px]">
   <div
    class="features_tag w-fit rounded-[100px] py-[12px] px-[14px] text-[#977200] text-[10px] md:text-[16px] font-[500] md:tracking-[-0.32px] uppercase mb-[12px] md:mb-[20px]">
    Features

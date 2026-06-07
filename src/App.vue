@@ -1,8 +1,17 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue'
+import { RouterView } from 'vue-router'
+import SplashScreen from '@/components/SplashScreen.vue'
+
+const showSplash = ref(true)
+
+function onSplashDone() {
+  showSplash.value = false
+}
 </script>
 
 <template>
+  <SplashScreen v-if="showSplash" @finished="onSplashDone" />
   <RouterView />
 </template>
 

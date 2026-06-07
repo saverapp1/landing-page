@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import SkeletonLoader from './SkeletonLoader.vue'
+import { useStaggerFade, useMagneticHover } from '@/composables/useAnimation'
+
+const cardContainer = ref<HTMLElement | null>(null)
+
+useStaggerFade(cardContainer, { stagger: 0.18, y: 60, start: 'top 85%' })
+</script>
+
 <template>
  <div class="w-full pb-[45px] md:pb-[105px]">
   <div
@@ -8,10 +18,8 @@
    class="text-[#1e1f24] md:text-[#101828] text-[22px] md:text-[44px] font-[600] tracking-[-0.44px] md:tracking-[-0.8px] mb-[17px] md:leading-[52px]">
    How does <span class="text-[#ffd214]">Savers Work ?</span>
   </div>
-  <!-- flex items -->
-  <div class="md:flex space-y-[20px] md:space-y-[0px] md:space-x-[20px]">
-   <!-- 1 -->
-   <div class="w-full md:w-[25%] bg-[#f3efff] rounded-[12px] border border-[#f1f1f3] p-[10px]">
+  <div ref="cardContainer" class="md:flex space-y-[20px] md:space-y-[0px] md:space-x-[20px]">
+   <div class="w-full md:w-[25%] bg-[#f3efff] rounded-[12px] border border-[#f1f1f3] p-[10px] hover:shadow-xl hover:shadow-[rgba(125,78,198,0.15)] hover:-translate-y-[4px] transition-all duration-300">
     <div
      class="text-[#7d4ec6] text-[13px] md:text-[16px] font-[500] leading-[20px] tracking-[-0.26px] md:leading-[26px] md:tracking-[-0.32px] mb-[12px] md:mb-[7px]">
      1. Download the Savers app
@@ -20,28 +28,25 @@
      <img loading="lazy" src="/saverstore.svg" />
     </div>
    </div>
-   <!-- end 1 -->
-   <div class="w-full md:w-[25%] bg-[#f3efff] rounded-[12px] border border-[#f1f1f3] p-[10px]">
+   <div class="w-full md:w-[25%] bg-[#f3efff] rounded-[12px] border border-[#f1f1f3] p-[10px] hover:shadow-xl hover:shadow-[rgba(125,78,198,0.15)] hover:-translate-y-[4px] transition-all duration-300">
     <div
      class="text-[#7d4ec6] text-[13px] md:text-[16px] font-[500] leading-[20px] tracking-[-0.26px] md:leading-[26px] md:tracking-[-0.32px] mb-[12px] md:mb-[7px]">
      2. Create your account
     </div>
     <div class="w-full box pt-[28px] md:pt-[17px] bg-[#fff] rounded-[12px] h-[170px] overflow-hidden">
-     <img loading="lazy" src="/createphone.png" class="w-[55%] md:w-[70%] h-full mx-auto" />
+     <SkeletonLoader src="/createphone.png" alt="Create account" class="w-[55%] md:w-[70%] h-full mx-auto" imgClass="w-full h-full object-contain" />
     </div>
    </div>
-   <!-- end 2 -->
-   <div class="w-full md:w-[25%] bg-[#f3efff] rounded-[12px] border border-[#f1f1f3] p-[10px]">
+   <div class="w-full md:w-[25%] bg-[#f3efff] rounded-[12px] border border-[#f1f1f3] p-[10px] hover:shadow-xl hover:shadow-[rgba(125,78,198,0.15)] hover:-translate-y-[4px] transition-all duration-300">
     <div
      class="text-[#7d4ec6] text-[13px] md:text-[16px] font-[500] leading-[20px] tracking-[-0.26px] md:leading-[26px] md:tracking-[-0.32px] mb-[12px] md:mb-[7px]">
      3. Choose your profile
     </div>
     <div class="w-full box pt-[28px] md:pt-[17px] bg-[#fff] rounded-[12px] h-[170px] overflow-hidden">
-     <img loading="lazy" src="/chooseprofile.png" class="w-[55%] md:w-[70%] h-full mx-auto" />
+     <SkeletonLoader src="/chooseprofile.png" alt="Choose profile" class="w-[55%] md:w-[70%] h-full mx-auto" imgClass="w-full h-full object-contain" />
     </div>
    </div>
-   <!-- end 3 -->
-   <div class="w-full md:w-[25%] bg-[#f3efff] rounded-[12px] border border-[#f1f1f3] p-[10px]">
+   <div class="w-full md:w-[25%] bg-[#f3efff] rounded-[12px] border border-[#f1f1f3] p-[10px] hover:shadow-xl hover:shadow-[rgba(125,78,198,0.15)] hover:-translate-y-[4px] transition-all duration-300">
     <div
      class="text-[#7d4ec6] text-[13px] md:text-[16px] font-[500] leading-[20px] tracking-[-0.26px] md:leading-[26px] md:tracking-[-0.32px] mb-[12px] md:mb-[7px]">
      4. Get familiar with the app
@@ -50,9 +55,7 @@
      <img loading="lazy" src="/setgo.svg" />
     </div>
    </div>
-   <!-- end 4 -->
   </div>
-  <!-- end flex items -->
  </div>
 </template>
 

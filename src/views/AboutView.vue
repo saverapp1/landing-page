@@ -1,6 +1,27 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
 import HeaderView from '@/components/HeaderView.vue';
 import FooterPage from '@/components/FooterPage.vue';
+import SkeletonLoader from '@/components/SkeletonLoader.vue'
+import { useStaggerFade, useScaleOnScroll, useFloating } from '@/composables/useAnimation'
+import gsap from 'gsap'
+
+const heroTitle = ref<HTMLElement | null>(null)
+const heroSubtitle = ref<HTMLElement | null>(null)
+const missionRef = ref<HTMLElement | null>(null)
+const valuesRef = ref<HTMLElement | null>(null)
+const teamRef = ref<HTMLElement | null>(null)
+const valuesCard = ref<HTMLElement | null>(null)
+
+useStaggerFade(missionRef, { stagger: 0.15, y: 40, start: 'top 85%' })
+useScaleOnScroll(valuesCard, { fromScale: 0.5, toScale: 1, start: 'top 85%', end: 'top 40%' })
+useFloating(valuesCard, { y: 8, duration: 3 })
+
+onMounted(() => {
+  const tl = gsap.timeline({ defaults: { ease: 'power4.out' } })
+  tl.fromTo(heroTitle.value, { y: 80, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 1.2 })
+    .fromTo(heroSubtitle.value, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 }, '-=0.6')
+})
 </script>
 
 <template>
@@ -8,11 +29,11 @@ import FooterPage from '@/components/FooterPage.vue';
     <div class="hero w-full h-full mb-[68px] md:mb-[116px]">
       <HeaderView />
       <div class="px-[20px] md:px-[0px]">
-        <div
+        <div ref="heroTitle"
           class="w-full mx-auto md:w-[60%] lg:w-[676px] text-center text-[#fff] text-[24px] md:text-[54px] font-[800] tracking-[-0.48px] md:tracking-[-1.08px] mb-[20px] md:mb-[24px] md:leading-[58px]">
           About <span class="text-[#ffd214]">Saver</span>
         </div>
-        <div
+        <div ref="heroSubtitle"
           class="w-full md:w-[50%] lg:w-[648px] mx-auto text-[#fff] text-center text-[14px] md:text-[28px] font-[300] md:tracking-[-0.56px] mb-[24px] md:mb-[32px]">
           Learn more about the mission behind Saver and how we're transforming the university experience.
         </div>
@@ -21,7 +42,7 @@ import FooterPage from '@/components/FooterPage.vue';
 
     <div class="w-full px-[20px] md:px-[60px] lg:px-[130px] pb-[80px] md:pb-[120px]">
       <div class="max-w-[860px] mx-auto space-y-[40px] md:space-y-[60px]">
-        <div class="flex flex-col md:flex-row md:items-center md:space-x-[40px]">
+        <div ref="missionRef" class="flex flex-col md:flex-row md:items-center md:space-x-[40px]">
           <div class="w-full md:w-[45%] mb-[24px] md:mb-[0px]">
             <div
               class="about_tag w-fit rounded-[100px] py-[8px] px-[14px] text-[#7d4ec6] text-[10px] md:text-[13px] font-[500] uppercase mb-[12px]">
@@ -38,10 +59,10 @@ import FooterPage from '@/components/FooterPage.vue';
           </div>
         </div>
 
-        <div class="bg-[#f3efff] rounded-[16px] p-[24px] md:p-[40px]">
+        <div ref="valuesCard" class="bg-[#f3efff] rounded-[16px] p-[24px] md:p-[40px] cursor-pointer">
           <div class="flex flex-col md:flex-row md:items-center md:space-x-[40px]">
             <div class="w-full md:w-[50%] mb-[24px] md:mb-[0px]">
-              <img src="/aboutbg.png" class="w-full rounded-[12px]" />
+              <SkeletonLoader src="/aboutbg.png" alt="About Saver" class="w-full rounded-[12px]" imgClass="w-full rounded-[12px]" />
             </div>
             <div class="w-full md:w-[50%]">
               <div
@@ -49,8 +70,8 @@ import FooterPage from '@/components/FooterPage.vue';
                 What We Stand For
               </div>
               <div class="space-y-[16px]">
-                <div class="flex items-start space-x-[12px]">
-                  <div class="w-[24px] h-[24px] mt-[2px] rounded-full bg-[#7d4ec6] flex items-center justify-center flex-shrink-0">
+                <div class="flex items-start space-x-[12px] group">
+                  <div class="w-[24px] h-[24px] mt-[2px] rounded-full bg-[#7d4ec6] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <span class="text-[#fff] text-[12px] font-[700]">1</span>
                   </div>
                   <div>
@@ -58,8 +79,8 @@ import FooterPage from '@/components/FooterPage.vue';
                     <div class="text-[#565656] text-[14px] md:text-[16px] font-[400]">Bringing students together across universities.</div>
                   </div>
                 </div>
-                <div class="flex items-start space-x-[12px]">
-                  <div class="w-[24px] h-[24px] mt-[2px] rounded-full bg-[#ffd214] flex items-center justify-center flex-shrink-0">
+                <div class="flex items-start space-x-[12px] group">
+                  <div class="w-[24px] h-[24px] mt-[2px] rounded-full bg-[#ffd214] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <span class="text-[#1e1f24] text-[12px] font-[700]">2</span>
                   </div>
                   <div>
@@ -67,8 +88,8 @@ import FooterPage from '@/components/FooterPage.vue';
                     <div class="text-[#565656] text-[14px] md:text-[16px] font-[400]">Everything you need, all in one place.</div>
                   </div>
                 </div>
-                <div class="flex items-start space-x-[12px]">
-                  <div class="w-[24px] h-[24px] mt-[2px] rounded-full bg-[#7d4ec6] flex items-center justify-center flex-shrink-0">
+                <div class="flex items-start space-x-[12px] group">
+                  <div class="w-[24px] h-[24px] mt-[2px] rounded-full bg-[#7d4ec6] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <span class="text-[#fff] text-[12px] font-[700]">3</span>
                   </div>
                   <div>
@@ -81,7 +102,7 @@ import FooterPage from '@/components/FooterPage.vue';
           </div>
         </div>
 
-        <div class="text-center">
+        <div ref="teamRef" class="text-center">
           <div
             class="about_tag w-fit rounded-[100px] py-[8px] px-[14px] text-[#7d4ec6] text-[10px] md:text-[13px] font-[500] uppercase mb-[12px] mx-auto">
             The Team
