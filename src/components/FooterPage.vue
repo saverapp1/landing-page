@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 const date = new Date()
 const year = date.getFullYear()
 </script>
@@ -8,19 +9,22 @@ const year = date.getFullYear()
   <!--  -->
   <div class="w-full space-y-[60px] md:space-y-[0px] md:flex md:items-start md:space-x-[10px] mb-[32px] md:mb-[17px]">
    <div class="w-full md:w-[33%]">
-    <img src="/footerbig.svg" class="md:block hidden" />
-    <img src="/footersmall.svg" class="md:hidden" />
+    <RouterLink to="/"><img src="/footerbig.svg" class="md:block hidden" /></RouterLink>
+    <RouterLink to="/"><img src="/footersmall.svg" class="md:hidden" /></RouterLink>
    </div>
    <div class="w-full md:w-[20%] space-y-[16px] md:space-y-[20px]">
-    <div
-     class="text-[#fff] text-[13px] md:text-[16px] font-[400] leading-[20px] md:leading-[16px] tracking-[-0.26px] md:tracking-[-0.32px] md:cursor-pointer">
-     Home</div>
-    <div
-     class="text-[#fff] text-[13px] md:text-[16px] font-[400] leading-[20px] md:leading-[16px] tracking-[-0.26px] md:tracking-[-0.32px] md:cursor-pointer">
-     Features</div>
-    <div
-     class="text-[#fff] text-[13px] md:text-[16px] font-[400] leading-[20px] md:leading-[16px] tracking-[-0.26px] md:tracking-[-0.32px] md:cursor-pointer">
-     Download app</div>
+    <RouterLink to="/"
+     class="block text-[#fff] text-[13px] md:text-[16px] font-[400] leading-[20px] md:leading-[16px] tracking-[-0.26px] md:tracking-[-0.32px] md:cursor-pointer">
+     Home</RouterLink>
+    <RouterLink to="/about"
+     class="block text-[#fff] text-[13px] md:text-[16px] font-[400] leading-[20px] md:leading-[16px] tracking-[-0.26px] md:tracking-[-0.32px] md:cursor-pointer">
+     About</RouterLink>
+    <RouterLink to="/terms"
+     class="block text-[#fff] text-[13px] md:text-[16px] font-[400] leading-[20px] md:leading-[16px] tracking-[-0.26px] md:tracking-[-0.32px] md:cursor-pointer">
+     Terms</RouterLink>
+    <RouterLink to="/privacy"
+     class="block text-[#fff] text-[13px] md:text-[16px] font-[400] leading-[20px] md:leading-[16px] tracking-[-0.26px] md:tracking-[-0.32px] md:cursor-pointer">
+     Privacy</RouterLink>
    </div>
    <div class="w-full md:w-[43%] space-y-[16px] md:space-y-[17px]">
     <div
