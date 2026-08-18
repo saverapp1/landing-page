@@ -18,7 +18,7 @@ useStaggerFade(featuresRef, { stagger: 0.2, y: 40, start: 'top 85%' })
    class="text-[#1e1f24] md:w-[496px] text-[22px] md:text-[40px] font-[600] tracking-[-0.44px] md:tracking-[-0.8px] mb-[28px] md:leading-[52px]">
    Unlock the Full
    <span class="text-[#ffd214]">
-    Potential of Saver&apos;s Experience
+    Potential of Savera&apos;s Experience
    </span>
   </div>
   <BigScreenFeatures />

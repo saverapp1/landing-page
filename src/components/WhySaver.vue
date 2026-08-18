@@ -24,7 +24,7 @@ useFloating(imageRef, { y: 8, duration: 3 })
   <div ref="textRef" class="w-full md:w-[calc(100%-560px)] mb-[34px] md:mb-[0px]">
    <div
     class="about_tag w-fit rounded-[100px] py-[12px] px-[14px] text-[#7d4ec6] text-[10px] md:text-[16px] font-[500] md:tracking-[-0.32px] uppercase mb-[12px] md:mb-[20px]">
-    Why choose saver ?
+    Why choose Savera ?
    </div>
    <div
     class="text-[#1e1f24] md:text-[#101828] text-[22px] md:text-[44px] font-[600] tracking-[-0.44px] md:tracking-[-0.8px] mb-[18px] md:mb-[34px] capitalize md:leading-[52px]">
@@ -59,7 +59,7 @@ useFloating(imageRef, { y: 8, duration: 3 })
    </div>
    <div ref="ctaRef"
     class="w-fit text-[#fff] text-[14px] md:text-[16px] font-[500] md:tracking-[-0.32px] text-center py-[12px] px-[32px] rounded-[100px] bg-[#7d4ec6] border border-[#c4c4c4] md:cursor-pointer hover:bg-[#6a3db5] hover:shadow-lg hover:shadow-[rgba(125,78,198,0.3)] transition-all duration-300">
-    Explore Saver
+    Explore Savera
    </div>
   </div>
  </div>

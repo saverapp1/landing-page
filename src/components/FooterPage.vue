@@ -17,9 +17,25 @@ useParallax(footerRef, { y: -20, start: 'top bottom', end: 'bottom top' })
   <div ref="footerRef" class="bg-[#7d4ec6] w-full pt-[40px] pb-[24px] px-[20px] md:pt-[72px] md:pb-[28px] md:px-[60px] lg:px-[130px]">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-[40px] md:gap-[24px] mb-[36px] md:mb-[48px]">
       <div class="md:col-span-4">
-        <RouterLink to="/"><img src="/footerbig.svg" class="hidden md:block" /></RouterLink>
-        <RouterLink to="/"><img src="/footersmall.svg" class="md:hidden mb-[16px]" /></RouterLink>
-        <div class="text-[#fff] text-[14px] md:text-[16px] font-[300] leading-[24px] md:leading-[28px] mt-[16px] md:mt-[24px] max-w-[320px]">
+        <RouterLink to="/" class="hidden md:inline-block">
+          <span class="relative overflow-hidden block w-[226px] h-[64px]">
+            <img
+              src="/savera.png"
+              class="absolute max-w-none"
+              style="width: 142.35%; height: 502.5%; left: -24.63%; top: -185.2%"
+            />
+          </span>
+        </RouterLink>
+        <RouterLink to="/" class="md:hidden inline-block">
+          <span class="relative overflow-hidden block w-[162px] h-[46px]">
+            <img
+              src="/savera.png"
+              class="absolute max-w-none"
+              style="width: 142.35%; height: 502.5%; left: -24.63%; top: -185.2%"
+            />
+          </span>
+        </RouterLink>
+        <div class="text-[#fff] text-[14px] md:text-[16px] font-[300] leading-[24px] md:leading-[28px] mt-[8px] md:mt-[12px] max-w-[320px]">
           The all-in-one platform designed for Nigerian university students to connect, learn, and thrive.
         </div>
       </div>
@@ -57,7 +73,7 @@ useParallax(footerRef, { y: -20, start: 'top bottom', end: 'bottom top' })
       <div class="md:col-span-3">
         <div class="text-[#ffce35] text-[12px] md:text-[13px] font-[600] uppercase tracking-[1px] mb-[16px] md:mb-[20px]">Get the App</div>
         <div class="text-[#fff] text-[14px] md:text-[15px] font-[300] leading-[24px] md:leading-[26px] mb-[20px]">
-          Download Saver on iOS and Android.
+          Download Savera on iOS and Android.
         </div>
         <button @click="showStore = true"
           class="flex items-center space-x-[10px] bg-[#fff] rounded-[100px] py-[11px] px-[20px] hover:bg-[#f3efff] transition-colors duration-200 group cursor-pointer">
@@ -71,7 +87,7 @@ useParallax(footerRef, { y: -20, start: 'top bottom', end: 'bottom top' })
 
     <div class="border-t border-[rgba(255,255,255,0.15)] pt-[20px] md:pt-[24px] flex flex-col md:flex-row md:items-center md:justify-between space-y-[12px] md:space-y-[0px]">
       <div class="text-[#fff] text-[13px] md:text-[14px] font-[300] opacity-[0.7]">
-        &copy; {{ year }} Saver. All rights reserved.
+        &copy; {{ year }} Savera. All rights reserved.
       </div>
       <div class="flex items-center space-x-[20px]">
         <a href="#" class="text-[#fff] text-[13px] md:text-[14px] font-[300] opacity-[0.7] hover:opacity-[1] hover:text-[#ffce35] transition-all duration-200">Privacy</a>
