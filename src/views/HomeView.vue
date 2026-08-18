@@ -55,7 +55,7 @@ onMounted(() => {
       <div class="px-[20px] md:px-[0px]">
         <div ref="heroTitle"
           class="w-full mx-auto md:w-[60%] lg:w-[676px] text-center text-[#fff] text-[24px] md:text-[54px] font-[800] tracking-[-0.48px] md:tracking-[-1.08px] mb-[20px] md:mb-[24px] md:leading-[58px]">
-          Transform your <span class="text-[#ffd214]">university Experience</span> with Saver
+          Transform your <span class="text-[#ffd214]">university Experience</span> with Savera
         </div>
         <div ref="heroSubtitle"
           class="w-full md:w-[50%] lg:w-[648px] mx-auto text-[#fff] text-center text-[14px] md:text-[28px] font-[300] md:tracking-[-0.56px] mb-[24px] md:mb-[32px]">

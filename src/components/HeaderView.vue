@@ -34,10 +34,22 @@ onMounted(() => {
     <div
       class="flex items-center justify-between w-full top-0 left-0 py-[20px] px-[20px] md:py-[49px] md:px-[60px] lg:px-[128px]"
     >
-      <div class="flex items-center space-x-[32px]">
-        <RouterLink to="/">
-          <img src="/saverbiglogo.svg" class="md:cursor-pointer hidden md:block" />
-          <img src="/saverlogo.svg" class="md:cursor-pointer md:hidden" />
+      <div class="flex items-center space-x-[32px] shrink-0">
+        <RouterLink to="/" class="md:cursor-pointer shrink-0">
+          <span class="hidden md:block relative overflow-hidden w-[198px] h-[56px] lg:w-[226px] lg:h-[64px]">
+            <img
+              src="/savera.png"
+              class="absolute max-w-none"
+              style="width: 142.35%; height: 502.5%; left: -24.63%; top: -185.2%"
+            />
+          </span>
+          <span class="md:hidden relative overflow-hidden block w-[162px] h-[46px]">
+            <img
+              src="/savera.png"
+              class="absolute max-w-none"
+              style="width: 142.35%; height: 502.5%; left: -24.63%; top: -185.2%"
+            />
+          </span>
         </RouterLink>
         <div class="hidden md:flex items-center space-x-[24px]">
           <RouterLink
@@ -74,9 +86,9 @@ onMounted(() => {
       </div>
       <div class="flex items-center space-x-[12px]">
         <div @click="openStore"
-          class="hidden md:flex py-[9.5px] px-[12px] space-x-[8px] items-center bg-[#fff] rounded-[100px] border border-[#fff] md:cursor-pointer download_shade"
+          class="hidden md:flex py-[9.5px] px-[12px] space-x-[8px] items-center bg-[#fff] rounded-[100px] border border-[#fff] md:cursor-pointer download_shade shrink-0"
         >
-          <div class="text-[#7d4ec6] text-[16px] md:leading-[26px] font-[500] tracking-[-0.32px]">
+          <div class="text-[#7d4ec6] text-[16px] md:leading-[26px] font-[500] tracking-[-0.32px] whitespace-nowrap">
             Download app
           </div>
           <div><img src="/download.svg" /></div>

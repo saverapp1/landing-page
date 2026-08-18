@@ -16,13 +16,13 @@ useStaggerFade(cardContainer, { stagger: 0.18, y: 60, start: 'top 85%' })
   </div>
   <div
    class="text-[#1e1f24] md:text-[#101828] text-[22px] md:text-[44px] font-[600] tracking-[-0.44px] md:tracking-[-0.8px] mb-[17px] md:leading-[52px]">
-   How does <span class="text-[#ffd214]">Savers Work ?</span>
+   How does <span class="text-[#ffd214]">Savera Work ?</span>
   </div>
   <div ref="cardContainer" class="md:flex space-y-[20px] md:space-y-[0px] md:space-x-[20px]">
    <div class="w-full md:w-[25%] bg-[#f3efff] rounded-[12px] border border-[#f1f1f3] p-[10px] hover:shadow-xl hover:shadow-[rgba(125,78,198,0.15)] hover:-translate-y-[4px] transition-all duration-300">
     <div
      class="text-[#7d4ec6] text-[13px] md:text-[16px] font-[500] leading-[20px] tracking-[-0.26px] md:leading-[26px] md:tracking-[-0.32px] mb-[12px] md:mb-[7px]">
-     1. Download the Savers app
+     1. Download the Savera app
     </div>
     <div class="w-full box flex justify-center items-center bg-[#fff] rounded-[12px] h-[170px]">
      <img loading="lazy" src="/saverstore.svg" />

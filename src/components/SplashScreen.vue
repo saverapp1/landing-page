@@ -22,8 +22,14 @@ onMounted(() => {
 <template>
   <div ref="splashRef"
     class="fixed inset-0 z-[9999] bg-[#7d4ec6] flex flex-col items-center justify-center">
-    <div ref="logoRef" class="mb-[32px]">
-      <img src="/footerbig.svg" class="w-[200px] md:w-[280px]" />
+    <div ref="logoRef" class="mb-[20px] md:mb-[28px]">
+      <span class="relative overflow-hidden block w-[166px] h-[47px] md:w-[237px] md:h-[67px]">
+        <img
+          src="/savera.png"
+          class="absolute max-w-none"
+          style="width: 142.35%; height: 502.5%; left: -24.63%; top: -185.2%"
+        />
+      </span>
     </div>
     <div class="w-[160px] md:w-[200px] h-[3px] bg-[rgba(255,255,255,0.2)] rounded-full overflow-hidden">
       <div ref="barRef" class="h-full bg-[#ffd214] rounded-full" style="width: 0%"></div>

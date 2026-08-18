@@ -31,11 +31,11 @@ onMounted(() => {
       <div class="px-[20px] md:px-[0px]">
         <div ref="heroTitle"
           class="w-full mx-auto md:w-[60%] lg:w-[676px] text-center text-[#fff] text-[24px] md:text-[54px] font-[800] tracking-[-0.48px] md:tracking-[-1.08px] mb-[20px] md:mb-[24px] md:leading-[58px]">
-          About <span class="text-[#ffd214]">Saver</span>
+          About <span class="text-[#ffd214]">Savera</span>
         </div>
         <div ref="heroSubtitle"
           class="w-full md:w-[50%] lg:w-[648px] mx-auto text-[#fff] text-center text-[14px] md:text-[28px] font-[300] md:tracking-[-0.56px] mb-[24px] md:mb-[32px]">
-          Learn more about the mission behind Saver and how we're transforming the university experience.
+          Learn more about the mission behind Savera and how we're transforming the university experience.
         </div>
       </div>
     </div>
@@ -54,15 +54,15 @@ onMounted(() => {
             </div>
           </div>
           <div class="w-full md:w-[55%] text-[#565656] text-[16px] md:text-[19px] font-[400] tracking-[-0.32px] md:tracking-[-0.4px] leading-[28px] md:leading-[34px]">
-            <p class="mb-[16px]">Saver was born out of a simple but powerful idea: Nigerian students deserve a platform that brings everything they need into one seamless experience. From buying and selling textbooks to scheduling appointments with lecturers, we saw a gap and decided to fill it.</p>
-            <p>Today, Saver is growing into a vibrant ecosystem where students connect, learn, share resources, and navigate campus life with confidence. We're not just building an app — we're building a community.</p>
+            <p class="mb-[16px]">Savera was born out of a simple but powerful idea: Nigerian students deserve a platform that brings everything they need into one seamless experience. From buying and selling textbooks to scheduling appointments with lecturers, we saw a gap and decided to fill it.</p>
+            <p>Today, Savera is growing into a vibrant ecosystem where students connect, learn, share resources, and navigate campus life with confidence. We're not just building an app — we're building a community.</p>
           </div>
         </div>
 
         <div ref="valuesCard" class="bg-[#f3efff] rounded-[16px] p-[24px] md:p-[40px] cursor-pointer">
           <div class="flex flex-col md:flex-row md:items-center md:space-x-[40px]">
             <div class="w-full md:w-[50%] mb-[24px] md:mb-[0px]">
-              <SkeletonLoader src="/aboutbg.png" alt="About Saver" class="w-full rounded-[12px]" imgClass="w-full rounded-[12px]" />
+              <SkeletonLoader src="/aboutbg.png" alt="About Savera" class="w-full rounded-[12px]" imgClass="w-full rounded-[12px]" />
             </div>
             <div class="w-full md:w-[50%]">
               <div
