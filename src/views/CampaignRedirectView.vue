@@ -11,7 +11,7 @@ const status = ref<'loading' | 'redirecting' | 'desktop' | 'inactive'>('loading'
 const influencerName = ref('Savera Partner')
 const campaignName = ref('Campus Ambassador')
 const deepLinkUrl = ref('')
-const iosStoreUrl = ref('https://apps.apple.com/app/savera/id6738981267')
+const iosStoreUrl = ref('https://apps.apple.com/us/app/savera/id6775737390')
 const androidStoreUrl = ref(
   'https://play.google.com/store/apps/details?id=com.universalsaver.app'
 )
@@ -26,9 +26,9 @@ const showDirectButton = ref(false)
 
 function openStore() {
   if (isIOS) {
-    window.location.href = iosStoreUrl.value
+    window.location.replace(iosStoreUrl.value)
   } else if (isAndroid) {
-    window.location.href = androidStoreUrl.value
+    window.location.replace(androidStoreUrl.value)
   }
 }
 
@@ -71,15 +71,8 @@ async function handleAttribution() {
 
       if (isMobile) {
         status.value = 'redirecting'
-        // Attempt deep link claim first
-        if (deepLinkUrl.value) {
-          window.location.href = deepLinkUrl.value
-        }
-        // Fallback to store
-        setTimeout(() => {
-          showDirectButton.value = true
-          openStore()
-        }, 1200)
+        showDirectButton.value = true
+        openStore()
       } else {
         status.value = 'desktop'
       }
