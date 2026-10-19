@@ -3,7 +3,8 @@ import { ref } from 'vue'
 import { RouterView } from 'vue-router'
 import SplashScreen from '@/components/SplashScreen.vue'
 
-const showSplash = ref(true)
+const isCampaign = typeof window !== 'undefined' && window.location.pathname.startsWith('/c/')
+const showSplash = ref(!isCampaign)
 
 function onSplashDone() {
   showSplash.value = false
