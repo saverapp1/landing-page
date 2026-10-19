@@ -36,6 +36,11 @@ const router = createRouter({
       path: '/faq',
       name: 'faq',
       component: () => import('../views/FaqView.vue')
+    },
+    {
+      path: '/c/:slug',
+      name: 'campaign-redirect',
+      component: () => import('../views/CampaignRedirectView.vue')
     }
   ]
 })
